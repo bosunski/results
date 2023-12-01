@@ -1,0 +1,19 @@
+{
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan-webmozart-assert": "^1.2",
+        "laravel/pint": "^1.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Results\\": "src/"
+        }
+    },
+    "scripts": {
+        "style": "vendor/bin/pint",
+        "analyze": "vendor/bin/phpstan analyse src"
+    }
+}
