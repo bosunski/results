@@ -19,15 +19,18 @@ test('unWrapOr returns value not the fallback', function () {
 
 test('andThen returns option with value', function () {
     $some = new Some(1);
-    $some = $some->andThen(function (int $x): Some {
+    $newSome = $some->andThen(function (int $x): Some {
         return new Some($x + 1);
     });
-    expect($some->unwrap())->toBe(2);
+
+    expect($newSome)->not()->toBe($some)
+        ->and($newSome->unwrap())->toBe(2);
 });
 
 test('map returns option with value', function () {
     $some = new Some(1);
-    $some = $some->map(fn (int $x): int => $x + 1);
-    expect($some->unwrap())->toBe(2);
-    // ToDo: Check that a new object is returned
+    $newSome = $some->map(fn (int $x): int => $x + 1);
+
+    expect($newSome)->not()->toBe($some)
+        ->and($newSome->unwrap())->toBe(2);
 });

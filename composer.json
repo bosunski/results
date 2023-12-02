@@ -21,6 +21,14 @@
     "autoload": {
         "psr-4": {
             "Results\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Results\\Tests\\": "tests/"
         }
     },
     "scripts": {
