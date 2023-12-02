@@ -1,4 +1,14 @@
 {
+    "name": "bosunski/results",
+    "description": "Rust-like Result type for PHP",
+    "keywords": [
+        "rust",
+        "result",
+        "php",
+        "error",
+        "exception"
+    ],
+    "license": "MIT",
     "require": {
         "php": "^8.0"
     },
