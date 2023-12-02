@@ -35,7 +35,7 @@ jobs:
     - name: Check code styles
       run: composer style --test -v
 
-    - name: Check code styles
+    - name: Run static analysis
       run: composer analyze
 
     - name: Run test suite
