@@ -5,7 +5,8 @@
     "require-dev": {
         "phpstan/phpstan": "^1.10",
         "phpstan/phpstan-webmozart-assert": "^1.2",
-        "laravel/pint": "^1.13"
+        "laravel/pint": "^1.13",
+        "pestphp/pest": "^2.26"
     },
     "autoload": {
         "psr-4": {
@@ -14,6 +15,12 @@
     },
     "scripts": {
         "style": "vendor/bin/pint",
+        "test": "vendor/bin/pest",
         "analyze": "vendor/bin/phpstan analyse src"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }

@@ -23,10 +23,10 @@ interface Option
     /**
      * @template T2
      *
-     * @param  T2  $default
+     * @param  T2  $fallback
      * @return T | T2
      */
-    public function unwrapOr(mixed $default): mixed;
+    public function unwrapOr(mixed $fallback): mixed;
 
     /**
      * @template T2

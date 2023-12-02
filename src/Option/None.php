@@ -29,9 +29,9 @@ class None implements Option
         throw new Exception('called `Option::unwrap()` on a `None` value');
     }
 
-    public function unwrapOr(mixed $default): mixed
+    public function unwrapOr(mixed $fallback): mixed
     {
-        return $default;
+        return $fallback;
     }
 
     public function andThen(callable $fn): Option

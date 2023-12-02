@@ -10,7 +10,7 @@ use Throwable;
  *
  * @implements Option<mixed>
  */
-readonly class Some implements Option
+class Some implements Option
 {
     /**
      * @param  T  $value
@@ -29,16 +29,28 @@ readonly class Some implements Option
         return $this->value;
     }
 
-    public function unwrapOr(mixed $default): mixed
+    public function unwrapOr(mixed $fallback): mixed
     {
         return $this->value;
     }
 
+    /**
+     * @template T2
+     *
+     * @param  callable(T): Option<T2>  $fn
+     * @return Option<T2>
+     */
     public function andThen(callable $fn): Option
     {
         return $fn($this->value);
     }
 
+    /**
+     * @template U
+     *
+     * @param  callable(T): U  $fn
+     * @return Option<U>
+     */
     public function map(callable $fn): Option
     {
         return new Some($fn($this->value));
