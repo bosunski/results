@@ -1,6 +1,6 @@
 {
     "name": "bosunski/results",
-    "description": "Rust-like Result type for PHP",
+    "description": "Rust-like Result/Option utility for PHP",
     "keywords": [
         "rust",
         "result",
