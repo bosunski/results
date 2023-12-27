@@ -158,11 +158,13 @@ In this example, `mightThrowException` is a function that might throw an excepti
 
 The `wrap` function provides a safe and expressive way to handle operations that can throw errors, allowing you to focus on your application logic rather than error handling when you don't need to.
 
+## Contributing
 
-## Testing
-
-You can run `composer run test` to run the unit tests for this library.
+You can see the [Contributing] docs for more details
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License].
+
+[MIT license]: LICENSE
+[Contributing]: CONTRIBUTING.md
