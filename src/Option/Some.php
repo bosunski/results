@@ -1,8 +1,8 @@
 <?php
 
-namespace Results\Option;
+namespace Bosunski\Results\Option;
 
-use Results\Result\Ok;
+use Bosunski\Results\Result\Ok;
 use Throwable;
 
 /**

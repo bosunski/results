@@ -1,9 +1,9 @@
 <?php
 
-namespace Results\Option;
+namespace Bosunski\Results\Option;
 
+use Bosunski\Results\Result\Err;
 use Exception;
-use Results\Result\Err;
 use Throwable;
 
 /**

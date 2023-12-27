@@ -1,6 +1,6 @@
 <?php
 
-use Results\Option\None;
+use Bosunski\Results\Option\None;
 
 test('unwrap returns value', function () {
     $some = new None();

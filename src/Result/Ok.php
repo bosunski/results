@@ -1,10 +1,10 @@
 <?php
 
-namespace Results\Result;
+namespace Bosunski\Results\Result;
 
+use Bosunski\Results\Option\Option;
+use Bosunski\Results\Option\Some;
 use Exception;
-use Results\Option\Option;
-use Results\Option\Some;
 use Throwable;
 
 /**

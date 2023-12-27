@@ -1,6 +1,6 @@
 <?php
 
-use Results\Tests\TestCase;
+use Bosunski\Results\Tests\TestCase;
 
 /*
 |--------------------------------------------------------------------------

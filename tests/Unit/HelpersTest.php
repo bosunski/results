@@ -1,17 +1,17 @@
 <?php
 
-use Results\Option\None;
-use Results\Option\Some;
-use Results\Result\Err;
-use Results\Result\Ok;
+use Bosunski\Results\Option\None;
+use Bosunski\Results\Option\Some;
+use Bosunski\Results\Result\Err;
+use Bosunski\Results\Result\Ok;
 
-use function Results\Err;
-use function Results\None;
-use function Results\Ok;
-use function Results\Option;
-use function Results\Result;
-use function Results\Some;
-use function Results\wrap;
+use function Bosunski\Results\Err;
+use function Bosunski\Results\None;
+use function Bosunski\Results\Ok;
+use function Bosunski\Results\Option;
+use function Bosunski\Results\Result;
+use function Bosunski\Results\Some;
+use function Bosunski\Results\wrap;
 
 test('Ok returns an Ok', function (): void {
     $ok = Ok(1);

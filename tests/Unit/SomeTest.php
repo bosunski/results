@@ -1,6 +1,6 @@
 <?php
 
-use Results\Option\Some;
+use Bosunski\Results\Option\Some;
 
 test('unwrap returns value', function () {
     $some = new Some(1);

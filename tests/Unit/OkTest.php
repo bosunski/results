@@ -1,7 +1,7 @@
 <?php
 
-use Results\Option\Some;
-use Results\Result\Ok;
+use Bosunski\Results\Option\Some;
+use Bosunski\Results\Result\Ok;
 
 test('expect returns value', function () {
     $ok = new Ok(1);

@@ -1,13 +1,13 @@
 <?php
 
-namespace Results;
+namespace Bosunski\Results;
 
-use Results\Option\None;
-use Results\Option\Option;
-use Results\Option\Some;
-use Results\Result\Err;
-use Results\Result\Ok;
-use Results\Result\Result;
+use Bosunski\Results\Option\None;
+use Bosunski\Results\Option\Option;
+use Bosunski\Results\Option\Some;
+use Bosunski\Results\Result\Err;
+use Bosunski\Results\Result\Ok;
+use Bosunski\Results\Result\Result;
 use Throwable;
 
 if (! function_exists('Some')) {

@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Results\\": "src/"
+            "Bosunski\\Results\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -28,7 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Results\\Tests\\": "tests/"
+            "Bosunski\\Results\\Tests\\": "tests/"
         }
     },
     "scripts": {

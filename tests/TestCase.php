@@ -1,6 +1,6 @@
 <?php
 
-namespace Results\Tests;
+namespace Bosunski\Results\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 

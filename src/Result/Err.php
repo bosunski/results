@@ -1,9 +1,9 @@
 <?php
 
-namespace Results\Result;
+namespace Bosunski\Results\Result;
 
-use Results\Option\None;
-use Results\Option\Option;
+use Bosunski\Results\Option\None;
+use Bosunski\Results\Option\Option;
 use Throwable;
 
 /**

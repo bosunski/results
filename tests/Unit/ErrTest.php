@@ -1,7 +1,7 @@
 <?php
 
-use Results\Option\None;
-use Results\Result\Err;
+use Bosunski\Results\Option\None;
+use Bosunski\Results\Result\Err;
 
 test('expect returns throws error value', function (): void {
     $e = new Exception('some message');
