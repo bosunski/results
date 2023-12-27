@@ -54,4 +54,14 @@ class None implements Option
     {
         return new Err($e);
     }
+
+    public function isSome(): bool
+    {
+        return false;
+    }
+
+    public function isNone(): bool
+    {
+        return true;
+    }
 }

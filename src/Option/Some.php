@@ -63,4 +63,14 @@ class Some implements Option
     {
         return new Ok($this->value);
     }
+
+    public function isSome(): bool
+    {
+        return true;
+    }
+
+    public function isNone(): bool
+    {
+        return false;
+    }
 }

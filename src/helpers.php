@@ -79,14 +79,14 @@ if (! function_exists('Result')) {
     }
 }
 
-if (! function_exists('wrapResult')) {
+if (! function_exists('wrap')) {
     /**
      * @template T
      *
      * @param  callable(): T  $fn
      * @return Result<T, Throwable>
      */
-    function wrapResult(callable $fn): Result
+    function wrap(callable $fn): Result
     {
         try {
             return Ok($fn());

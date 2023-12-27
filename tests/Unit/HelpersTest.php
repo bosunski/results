@@ -11,7 +11,7 @@ use function Results\Ok;
 use function Results\Option;
 use function Results\Result;
 use function Results\Some;
-use function Results\wrapResult;
+use function Results\wrap;
 
 test('Ok returns an Ok', function (): void {
     $ok = Ok(1);
@@ -60,14 +60,14 @@ test('Result() returns an Err if value is null', function (): void {
 });
 
 test('wrapResult() returns Ok if successful', function (): void {
-    $ok = wrapResult(fn () => 1);
+    $ok = wrap(fn () => 1);
     expect($ok)->toBeInstanceOf(Ok::class)
         ->and($ok->unwrap())->toBe(1);
 });
 
 test('wrapResult() returns Err if unsuccessful', function (): void {
     $exception = new Exception('some message');
-    $err = wrapResult(fn () => throw $exception);
+    $err = wrap(fn () => throw $exception);
     expect($err)->toBeInstanceOf(Err::class)
         ->and($e = $err->expectErr(''))->toBeInstanceOf(Exception::class)
         ->and($e)->toBe($exception)

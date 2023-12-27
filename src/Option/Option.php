@@ -51,4 +51,14 @@ interface Option
      * @return Result<T, E>
      */
     public function toResult(Throwable $e): Result;
+
+    /**
+     * @phpstan-assert-if-true !true $this->isNone()
+     */
+    public function isSome(): bool;
+
+    /**
+     * @phpstan-assert-if-true !true $this->isSome()
+     */
+    public function isNone(): bool;
 }
