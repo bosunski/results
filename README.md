@@ -1,4 +1,4 @@
-# Results [WIP]
+# Results
 
 Results is a PHP simple (dependency-free) library that provides a set of helper functions and classes for handling optional values and results of operations. 
 It is inspired by the [`Option`](https://doc.rust-lang.org/std/option/enum.Option.html) and [`Result`](https://doc.rust-lang.org/std/result/enum.Result.html) types in Rust. The implementation itself is based on the TypeScript implementation called [`ts-results`](https://github.com/vultix/ts-results).
