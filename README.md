@@ -1,10 +1,11 @@
 # Results [WIP]
 
-Results is a PHP library that provides a set of helper functions and classes for handling optional values and results of operations. It is inspired by the [`Option`](https://doc.rust-lang.org/std/option/enum.Option.html) and [`Result`](https://doc.rust-lang.org/std/result/enum.Result.html) types in Rust. The implementation itself is based on the TypeScript implementation called [`ts-results`](https://github.com/vultix/ts-results).
+Results is a PHP simple (dependency-free) library that provides a set of helper functions and classes for handling optional values and results of operations. 
+It is inspired by the [`Option`](https://doc.rust-lang.org/std/option/enum.Option.html) and [`Result`](https://doc.rust-lang.org/std/result/enum.Result.html) types in Rust. The implementation itself is based on the TypeScript implementation called [`ts-results`](https://github.com/vultix/ts-results).
 
 ## Installation
 
-You can install the library via Composer:
+You can install the library through Composer:
 
 ```bash
 composer require bosunski/results
@@ -17,6 +18,8 @@ composer require bosunski/results
 The `Option` type represents an optional value: every `Option` is either `Some` and contains a value, or `None`, and does not.
 
 ```php
+<?php
+
 use function Bosunski\Results\Option;
 
 $some = Option('value'); // Some
@@ -28,6 +31,8 @@ $none = Option(null); // None
 The `Result` type is a type that represents either success (`Ok`) or failure (`Err`).
 
 ```php
+<?php
+
 use function Bosunski\Results\Result;
 
 $ok = Result('value'); // Ok
@@ -51,6 +56,8 @@ The library provides a set of helper functions for creating `Option` and `Result
 Optional values and results in PHP can be represented using the `Option` and `Result` types provided by the Results library. Here are some examples:
 
 ```php
+<?php
+
 use function Bosunski\Results\Option;
 use function Bosunski\Results\Result;
 
@@ -76,6 +83,8 @@ Let's dive into more complex examples of using the `Option` and `Result` types i
 Consider a scenario where we have a function that may or may not return a value. We can use the `Option` type to handle this uncertainty.
 
 ```php
+<?php
+
 use Bosunski\Results\Option as OptionInterface;
 use function Bosunski\Results\Option;
 
@@ -95,11 +104,16 @@ if ($userOption->isSome()) {
 } else {
     // Handle the case where no user was found
 }
+
+// You can also do this
+$user = $userOption->unwrap() // Throws error if null
 ```
 
 Now, let's consider a scenario where we have a function that can either succeed or fail. We can use the `Result` type to handle this.
 
 ```php
+<?php
+
 use Bosunski\Results\Result\Result as ResultInterface;
 use function Bosunski\Results\Result;
 
@@ -121,6 +135,9 @@ if ($result->isOk()) {
     $error = $result->unwrapErr();
     // Handle the error
 }
+
+// You can also do this
+$user = $result->unwrap() // Throws error if an error is present
 ```
 
 In these examples, the `Option` and `Result` types provide a way to handle optional values and the results of operations in a safe and expressive manner.
@@ -135,6 +152,8 @@ The `wrap` function is a utility function provided by the library. It is designe
 Here's an example of how you might use the wrap function:
 
 ```php
+<?php
+
 use function Bosunski\Results\wrap;
 
 function mightThrowException(): int {
@@ -145,7 +164,7 @@ function mightThrowException(): int {
     return 42;
 }
 
-$result = wrap('mightThrowException');
+$result = wrap(mightThrowException(...));
 
 if ($result->isOk()) {
     echo "Success: " . $result->unwrap();
@@ -159,12 +178,18 @@ In this example, `mightThrowException` is a function that might throw an excepti
 The `wrap` function provides a safe and expressive way to handle operations that can throw errors, allowing you to focus on your application logic rather than error handling when you don't need to.
 
 ## Contributing
-
-You can see the [Contributing] docs for more details
+### Setting up the project
+You can install development dependencies by running:
+```shell
+composer install
+```
+### Running tests
+```shell
+composer run test
+```
 
 ## License
 
 This project is licensed under the [MIT License].
 
 [MIT license]: LICENSE
-[Contributing]: CONTRIBUTING.md
