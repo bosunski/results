@@ -13,6 +13,10 @@ composer require bosunski/results
 
 ## Usage
 
+### Demo
+
+You can try the package in this [Playground](https://play.phpsandbox.io/bosunski/results/v7oRmK4xw9K3G0kB)
+
 ### Option
 
 The `Option` type represents an optional value: every `Option` is either `Some` and contains a value, or `None`, and does not.
