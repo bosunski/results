@@ -147,7 +147,7 @@ In these examples, the `Option` and `Result` types provide a way to handle optio
 The `wrap` function is a utility function provided by the library. It is designed to handle operations that can throw an error. The `wrap` function executes a `callable` and returns its result wrapped in a `Result` object. If the callable function throws an exception, the wrap function catches it and returns an `Err` object containing the exception.
 
 > [!IMPORTANT]
-> The error that `wrap` captures depends on your error configuration. Also, `wrap` will only capture instances of `Throwable`. If your function throws something that is not an instance of `Throwable`, it will not be captured by `wrap`.
+> The `wrap` function will only catch instances of [`Throwable`](https://www.php.net/manual/en/class.throwable.php). If your function raises something like a fatal error it will not be caught by `wrap`.
 
 Here's an example of how you might use the wrap function:
 
